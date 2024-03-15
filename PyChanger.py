@@ -34,8 +34,11 @@ def chtheme(themename):
     os.chdir(theme_folder)
     if not os.path.exists(f'/home/{usr}/.config/gtk-4.0'):
         shutil.copytree(f'{theme_folder}/{themename}/gtk-4.0', f'/home/{usr}/.config/gtk-4.0')
-    else:
+    elif not os.path.exists(f'/home/{usr}/.config/gtk-4.0.old'):
         os.rename(f'/home/{usr}/.config/gtk-4.0', f'/home/{usr}/.config/gtk-4.0.old')
+        shutil.copytree(f'{theme_folder}/{themename}/gtk-4.0', f'/home/{usr}/.config/gtk-4.0')
+    else:
+        os.remove(f'/home/{usr}/.config/gtk-4.0')
         shutil.copytree(f'{theme_folder}/{themename}/gtk-4.0', f'/home/{usr}/.config/gtk-4.0')
     sp.run(f'gsettings set org.gnome.desktop.interface gtk-theme "{themename}"', shell=True)
     sp.run(f'gsettings set org.gnome.desktop.wm.preferences theme "{themename}"', shell=True)
