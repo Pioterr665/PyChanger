@@ -101,15 +101,4 @@ if __name__ == "__main__":
 #to change shell theme use:
 # dconf write /org/gnome/shell/extensions/user-theme/name "'theme_name'"
 
-# gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 10'
-
-# gsettings set org.gnome.desktop.interface font-name 'Roboto 10'
-# gsettings set org.gnome.desktop.interface document-font-name 'Roboto 10'
-# gsettings set org.gnome.desktop.interface monospace-font-name 'Inconsolata 12'
-# gsettings set org.gnome.desktop.interface show-battery-percentage true
-
-# gsettings set org.gnome.desktop.background show-desktop-icons false
-# gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/adapta/tealized.jpg'
-
-# gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 # settings set org.gnome.desktop.interface color-scheme 'prefer-dark' for dark and default for white
